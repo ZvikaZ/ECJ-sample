@@ -18,6 +18,12 @@ public class SampleProblem extends GPProblem implements SimpleProblemForm {
     {
         if (ind.evaluated) return;
 
+        //TODO remove this...
+        var p = state.population.subpops.get(0);
+        if (p.initialSize != p.individuals.size()) {
+            state.output.fatal("someone got lost!!!");
+        }
+
         StringData input = (StringData)(this.input);
 
         // make sure that we start empty
