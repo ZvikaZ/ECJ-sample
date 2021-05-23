@@ -1,0 +1,76 @@
+# @ec.Evolve = <ECJ-DIR>/ecj/src/main/resources/ec/ , but inside Maven's .jar
+parent.0 = @ec.Evolve gp/ge/ge.params
+parent.1 = @ec.Evolve gp/koza/koza.params
+
+gp.fs.size = 1
+gp.fs.0.name = f0
+
+# we have 5 functions: Cons, Cons3, Print, WordERC, Space
+gp.fs.0.size = 5
+
+# ncN means that this function has N parameters
+
+# Cons - helper function, that combines its two parameters
+gp.fs.0.func.0 = func.Cons
+gp.fs.0.func.0.nc = nc2
+
+# Cons3 - helper function, that combines its three parameters
+gp.fs.0.func.1 = func.Cons3
+gp.fs.0.func.1.nc = nc3
+
+# real function
+gp.fs.0.func.2 = func.Print
+gp.fs.0.func.2.nc = nc1
+
+# ERC
+gp.fs.0.func.3 = func.WordERC
+gp.fs.0.func.3.nc = nc0
+
+# terminal
+gp.fs.0.func.4 = func.Space
+gp.fs.0.func.4.nc = nc0
+
+
+eval.problem.problem = SampleProblem
+
+# user to pass data around between functions
+eval.problem.problem.data = func.StringData
+
+ge.species.file.0 = sample.grammar
+
+# the default genome size is too small, IMO
+pop.subpop.0.species.min-initial-size = 60
+pop.subpop.0.species.max-initial-size = 100
+
+# the default is one pass, and silently fail if it's too small. I don't like it
+pop.subpop.0.species.passes = 4
+
+# elitism
+breed.elite.0 = 2
+
+# num of generations
+generations	= 200
+
+# num of individuals in generation
+pop.subpop.0.size	= 40
+
+# turn off mutation (useful for debugging)
+# pop.subpop.0.species.mutation-prob = 0
+
+# use all CPU cores available for threads ; set seeds to 'time'
+evalthreads = auto
+# setting this to auto, causes few Exceptions, and individuals getting lost
+# breedthreads = auto
+
+# debug params: prints all parameters used, from all files
+# print-params = true
+
+# add more statistics
+stat.num-children = 1
+stat.child.0 = ec.simple.SimpleShortStatistics
+stat.child.0.file = $out.tab.stat
+stat.child.0.do-size = true
+stat.child.0.do-time = true
+
+# until https://github.com/GMUEClab/ecj/issues/75 will be fixed
+pop.subpop.0.species.pipe.source.0.source.0.crossover-type = one

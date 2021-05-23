@@ -1,0 +1,10 @@
+<start> ::= <statement> | (Cons <statement> <start>)
+<statement> ::= (Print <string>)
+<string> ::= <word> | (Cons3 <word> <space> <word>) | (Cons3 <word-space-word> <space> <word>)
+<word-space-word> ::= (Cons3 <word> <space> <word>)
+# WordERC is defined to take one of hello | world | today
+<word> ::= (WordERC)
+# even simple terminals need their own function
+<space> ::= (Space)
+#
+# beware of empty lines - they cause errors

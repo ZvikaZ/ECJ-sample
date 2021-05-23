@@ -1,0 +1,11 @@
+.idea/uiDesigner.xml
+*.iml
+
+target/
+
+*.stat
+bpRun.log
+
+.*.swp
+slurm-*.out
+
