@@ -21,7 +21,7 @@ public class SampleProblem extends GPProblem implements SimpleProblemForm {
         //TODO remove this...
         var p = state.population.subpops.get(0);
         if (p.initialSize != p.individuals.size()) {
-            state.output.fatal("someone got lost!!!");
+            state.output.fatal("someone got lost!!! (you might want to comment `breedthreads = auto` in the params file)");
         }
 
         StringData input = (StringData)(this.input);
