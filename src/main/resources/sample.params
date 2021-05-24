@@ -59,7 +59,6 @@ pop.subpop.0.size	= 40
 
 # use all CPU cores available for threads ; set seeds to 'time'
 evalthreads = auto
-# setting this to auto, causes few Exceptions, and individuals getting lost
 breedthreads = auto
 
 # debug params: prints all parameters used, from all files
@@ -73,4 +72,4 @@ stat.child.0.do-size = true
 stat.child.0.do-time = true
 
 # until https://github.com/GMUEClab/ecj/issues/75 will be fixed
-pop.subpop.0.species.pipe.source.0.source.0.crossover-type = one
+#pop.subpop.0.species.pipe.source.0.source.0.crossover-type = one

@@ -13,13 +13,16 @@
         <dependency>
             <groupId>edu.gmu.cs</groupId>
             <artifactId>ecj</artifactId>
-            <version>27</version>
+<!--            using my compiled version, until https://github.com/GMUEClab/ecj/issues/75 and https://github.com/GMUEClab/ecj/issues/77 will be fixed-->
+            <version>27.1-zvika-2</version>
         </dependency>
     </dependencies>
 
     <repositories>
         <repository>
         <!-- TODO: remove this, and the dir, (and fix run.*) when https://github.com/GMUEClab/ecj/issues/74 is fixed -->
+<!--            meanwhile, this can be updated with: -->
+<!--            mvn deploy:deploy-file -DgroupId=edu.gmu.cs -DartifactId=ecj -Dversion=27.1-zvika-1 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=/home/zvikah/projects/ecj/ecj/ecj/target/ecj-27.1-zvika-1.jar-->
             <id>local-maven-repo</id>
             <url>file:///${project.basedir}/local-maven-repo</url>
         </repository>
