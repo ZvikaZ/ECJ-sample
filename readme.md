@@ -4,6 +4,13 @@ RUNNING
 - and now, either `run.sh`, or `run.bat`, according to your OS
 
 
+SLURM SUPPORT
+=============
+
+If you have a SLURM cluster, you can run `regression.sh` (which uses `info.sh`).
+Otherwise, just ignore these 2 files.
+
+
 WHAT IS IT?
 ===========
 A sample project for ECJ (https://cs.gmu.edu/~eclab/projects/ecj/), to be used as a basis for your own project.
