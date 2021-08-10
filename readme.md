@@ -44,9 +44,9 @@ is written as:
 also note that each function must have a fixed number of parameters (unlike real LISP). Thus, for convenience, I've also 
 declared a `Con3`, which is similar to `Cons`, but with 3 parameters.
 
-Thus, the phrase `<word> <space> <word>` is written as `(Cons3 <word> <space> <word>)`.ce> <word>).
+Thus, the phrase `<word> <space> <word>` is written as `(Cons3 <word> <space> <word>)`.
 
-Another point is that each terminal node should be decalred as a function. Thus, we have `<space> ::= (Space)`
+Another point is that each terminal node should be declared as a function. Thus, we have `<space> ::= (Space)`
 
 Finally, we could have 3 functions, for "hello", "world" and "today". But it's easier to use ERC mechanism. Thus:
 
