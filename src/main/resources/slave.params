@@ -1,0 +1,3 @@
+parent.0 = sample.params
+eval.master.host = localhost
+eval.return-inds = false

@@ -49,7 +49,7 @@ pop.subpop.0.species.passes = 4
 breed.elite.0 = 2
 
 # num of generations
-generations	= 200
+generations	= 10
 
 # num of individuals in generation
 pop.subpop.0.size	= 40
@@ -57,9 +57,9 @@ pop.subpop.0.size	= 40
 # turn off mutation (useful for debugging)
 # pop.subpop.0.species.mutation-prob = 0
 
-# use all CPU cores available for threads ; set seeds to 'time'
-evalthreads = auto
-breedthreads = auto
+## use all CPU cores available for threads ; set seeds to 'time'
+#evalthreads = auto
+#breedthreads = auto
 
 # debug params: prints all parameters used, from all files
 # print-params = true
@@ -73,3 +73,11 @@ stat.child.0.do-time = true
 
 # until https://github.com/GMUEClab/ecj/issues/75 will be fixed
 #pop.subpop.0.species.pipe.source.0.source.0.crossover-type = one
+
+# parallel eval processing (master/slave)
+eval.masterproblem = ec.eval.MasterProblem
+eval.master.port = 15000
+eval.masterproblem.job-size = 1
+eval.masterproblem.max-jobs-per-slave = 1
+eval.compression = false
+evalthreads = 1
