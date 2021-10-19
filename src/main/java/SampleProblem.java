@@ -1,5 +1,6 @@
 import ec.EvolutionState;
 import ec.Individual;
+import ec.Subpopulation;
 import ec.gp.GPIndividual;
 import ec.gp.GPProblem;
 import ec.gp.koza.KozaFitness;
@@ -19,7 +20,7 @@ public class SampleProblem extends GPProblem implements SimpleProblemForm {
         if (ind.evaluated) return;
 
         //TODO remove this...
-        var p = state.population.subpops.get(0);
+        Subpopulation p = state.population.subpops.get(0);
         if (p.initialSize != p.individuals.size()) {
             state.output.fatal("someone got lost!!! (you might want to comment `breedthreads = auto` in the params file)");
         }
