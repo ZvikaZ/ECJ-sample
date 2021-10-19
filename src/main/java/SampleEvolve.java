@@ -8,7 +8,7 @@ public class SampleEvolve {
 
 
     private static String getResourceFileName(String resource) {
-        ClassLoader classLoader = ClassLoader.getSystemClassLoader();
+        ClassLoader classLoader = SampleEvolve.class.getClassLoader();
         return classLoader.getResource(resource).getPath();
     }
 

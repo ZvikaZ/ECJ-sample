@@ -1,7 +1,8 @@
 RUNNING
 =======
 - `mvn clean package`
-- and now, either `run.sh`, or `run.bat`, according to your OS
+- and now, either `run.sh`, or `run.bat`, according to your OS ; or simply `mvn exec:java`
+- or one liner to compile and run: `mvn clean compile exec:java`
 
 
 SLURM SUPPORT
