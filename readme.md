@@ -1,8 +1,8 @@
 RUNNING
 =======
-- `mvn clean package`
-- and now, either `run.sh`, or `run.bat`, according to your OS ; or simply `mvn exec:java`
-- or one liner to compile and run: `mvn clean compile exec:java`
+- `mvn clean compile`
+- master host: `mvn exec:java@master`
+- slave host: ` mvn exec:java@slave`
 
 
 SLURM SUPPORT

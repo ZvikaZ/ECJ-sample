@@ -48,14 +48,29 @@
                 <version>3.0.0</version>
                 <executions>
                     <execution>
+                        <id>master</id>
                         <goals>
                             <goal>java</goal>
                         </goals>
+                        <configuration>
+                            <mainClass>SampleEvolve</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>slave</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>ec.eval.Slave</mainClass>
+                            <arguments>
+                                <argument>-file</argument>
+                                <argument>src/main/resources/slave.params</argument>
+                            </arguments>
+
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <mainClass>SampleEvolve</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>
